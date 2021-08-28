@@ -55,7 +55,7 @@
     "compile": "bob-esbuild build",
     "prepack": "bob-esbuild build",
     "coverage": "codecov",
-    "test": "jest",
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
     "postpublish": "gh-release"
   },
   "files": [

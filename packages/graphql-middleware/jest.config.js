@@ -1,12 +1,15 @@
-module.exports = {
+/**
+ * @type {import("@jest/types").Config.InitialOptions}
+ */
+const config = {
   roots: ['<rootDir>/tests', '<rootDir>/src'],
   testEnvironment: 'node',
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
   },
-  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$',
+  testRegex: '.*',
   testPathIgnorePatterns: ['/node_modules/', '/__fixtures__/'],
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node', 'mjs'],
   collectCoverage: true,
   collectCoverageFrom: [
     '**/*.{ts,tsx}',
@@ -23,3 +26,5 @@ module.exports = {
     },
   },
 }
+
+module.exports = config
